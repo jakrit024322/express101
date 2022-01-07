@@ -7,6 +7,8 @@ const port = process.env.PORT || 4002;
 
 const productRoute = require("./routes/productRoute");
 
+const employeeRoute = require("./routes/employeeRoute");
+
 const app = exprees();
 
 app.use(cors());
@@ -16,6 +18,7 @@ app.use(bodyParser.urlencoded({
 }));
 
 app.use("/product", productRoute);
+app.use("/employee", employeeRoute);
 
 // app.put();
 // app.patch();
